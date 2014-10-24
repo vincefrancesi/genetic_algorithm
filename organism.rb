@@ -11,10 +11,9 @@ class Organism
   #
   # Returns the new mutated genome as String.
   def mutation(genome)
-    genome[rand(50)] = genome_map.sample
-    genome[rand(50)] = genome_map.sample
-    genome[rand(50)] = genome_map.sample
-    genome[rand(50)] = genome_map.sample
+    4.times do # up to 8% mutation rate
+      genome[rand(50)] = genome_map.sample
+    end
     genome
   end
 
